@@ -154,4 +154,14 @@ public class FWDStepdefs {
     public void userMovedToCheckOutScreen() {
         Assert.assertEquals(checkoutPage.getPageTitle(), "Checkout");
     }
+
+    @When("user click on awesome tag")
+    public void userClickOnAwesomeTag() {
+        homePage.clickOnAwesomeTag();
+    }
+
+    @Then("user moved to products tagged with awesome")
+    public void userMovedToProductsTaggedWithAwesome() {
+        Assert.assertEquals(homePage.getAwesomeTagTitle(),"Products tagged with 'awesome'");
+    }
 }

@@ -36,6 +36,12 @@ public class HomePage extends DriverManager {
     @FindBy(css = "button[class='button-2 add-to-compare-list-button']")
     WebElement addToCompareList;
 
+    @FindBy(css = "body > div.master-wrapper-page > div.master-wrapper-content > div > div.side-2 > div.block.block-popular-tags > div.listbox > div.tags > ul > li:nth-child(2) > a")
+    WebElement awesomeTagBtn;
+
+    @FindBy(xpath = "/html/body/div[6]/div[3]/div/div[2]/div/div[1]/h1")
+    WebElement awesomeTagHeader;
+
     public HomePage() {
         PageFactory.initElements(webDriver.get(), this);
     }
@@ -100,5 +106,11 @@ public class HomePage extends DriverManager {
     }
     public void moveToCart(){
         webDriver.get().navigate().to("https://demo.nopcommerce.com/cart");
+    }
+    public void clickOnAwesomeTag(){
+        awesomeTagBtn.click();
+    }
+    public String getAwesomeTagTitle(){
+        return awesomeTagHeader.getText();
     }
 }

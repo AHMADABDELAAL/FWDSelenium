@@ -45,6 +45,6 @@ public class CutomizeTestNGCucmberRunner extends DriverManager{
         if (testNGCucumberRunner == null) {
             return;
         }
-        testNGCucumberRunner.finish();
+//        testNGCucumberRunner.finish();
     }
 }
