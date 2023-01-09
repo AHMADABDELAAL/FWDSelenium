@@ -1,12 +1,12 @@
 package Hooks;
 
 import Base.DriverManager;
-import Utility.Util;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class hook extends DriverManager {
