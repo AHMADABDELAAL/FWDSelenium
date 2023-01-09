@@ -8,6 +8,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 
+@Slf4j
 public class hook extends DriverManager {
 
 	@BeforeStep
@@ -19,10 +20,12 @@ public class hook extends DriverManager {
 	}
 
 	@Before
-	public void beforeScenario() {
+	public void beforeScenario(Scenario scenario) {
+		log.info("[STARTED] Scenario: " + scenario.getName());
 	}
 
 	@After
 	public void afterScenario(Scenario scenario) {
+		log.info("[ENDED] Scenario: " + scenario.getName());
 	}
 }

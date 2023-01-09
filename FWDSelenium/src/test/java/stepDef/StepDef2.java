@@ -24,6 +24,11 @@ public class StepDef2 {
         loginPage.clickLoginBtn();
     }
 
+    @When("user clicks on forgot password")
+    public void userClicksOnForgotPassword() {
+        loginPage.clickForgotPasswordBtn();
+    }
+
     @Then("user logged in")
     public void userLoggedIn() {
         Assert.assertEquals(homePage.getLogoutBtnText(), "Log out", "Login failed");

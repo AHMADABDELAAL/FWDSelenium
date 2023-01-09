@@ -11,6 +11,7 @@ public class StepDef12 {
     HomePage homePage = new HomePage();
     CheckoutPage checkoutPage = new CheckoutPage();
 
+
     @When("navigate to cart")
     public void navigateToCart() {
         homePage.moveToCart();
@@ -27,5 +28,9 @@ public class StepDef12 {
         Assert.assertEquals(checkoutPage.getPageTitle(), "Checkout");
     }
 
+    @Then("click add to cart")
+    public void clickAddToCart() {
+        homePage.clickAddToCart();
+    }
 
 }

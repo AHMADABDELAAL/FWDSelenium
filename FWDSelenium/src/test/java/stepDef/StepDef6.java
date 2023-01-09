@@ -20,6 +20,12 @@ public class StepDef6 {
         homePage.searchForItem();
     }
 
+    @When("user enter email")
+    public void userEnterEmail() {
+        registerPage.enterEmail();
+        passwordRecoveryPage.clickSendEmailBtn();
+    }
+
     @Then("user can select different categories")
     public void userCanSelectDifferentCategories() {
         homePage.clickCategory();
